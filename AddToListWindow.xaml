@@ -1,0 +1,75 @@
+﻿<Window
+    x:Class="Pratice_App_Week9.AddToListWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Pratice_App_Week9"
+    mc:Ignorable="d"
+    Title="AddToListWindow"
+    Height="450"
+    Width="800">
+    <Canvas
+        x:Name="cnvAddWindow"
+        Background="Black">
+        <ListView
+            x:Name="lvBooks"
+            Height="313"
+            Width="429"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Canvas.Left="336"
+            Canvas.Top="32">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Title"
+                        DisplayMemberBinding="{Binding Title}"
+                        Width="100" />
+                    <GridViewColumn
+                        Header="Author"
+                        DisplayMemberBinding="{Binding Author}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox
+            x:Name="txtTitle"
+            Canvas.Left="128"
+            TextWrapping="Wrap"
+            Canvas.Top="188"
+            Width="171"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <Label
+            Content="Title:"
+            Canvas.Left="78"
+            Canvas.Top="184"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Foreground="#FFF4EEEE" />
+        <TextBox
+            x:Name="txtAuthor"
+            Canvas.Left="128"
+            TextWrapping="Wrap"
+            Canvas.Top="240"
+            Width="171"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+        <Label
+            Content="Author:"
+            Canvas.Left="64"
+            Canvas.Top="236"
+            Foreground="#FFF4EEEE"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+        <Button
+            x:Name="btnAddBook"
+            Content="Add Book"
+            Canvas.Left="128"
+            Canvas.Top="304"
+            FontSize="20"
+            Height="47"
+            Width="171"
+            Click="btnAddBook_Click" />
+
+    </Canvas>
+</Window>

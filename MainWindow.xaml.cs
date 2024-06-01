@@ -19,8 +19,14 @@ namespace Pratice_App_Week9
         public MainWindow()
         {
             InitializeComponent();//<--Don't delete this and keep at the top
+            lvBooks.ItemsSource = Data.Books;
         }//end of MainWindow()
 
+        private void btnOpenNewWindow_Click(object sender, RoutedEventArgs e)
+        {
+            AddToListWindow addToListWindow = new AddToListWindow();
+            addToListWindow.Show();
+        }
     }//end of class
 
 }//end of namespace

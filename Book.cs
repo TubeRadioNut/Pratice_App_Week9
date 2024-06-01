@@ -17,8 +17,16 @@ namespace Pratice_App_Week9
             _title = title;
             _author = author;
         }
+        //default constructor
+        public Book()
+        {
+            _title = "Placeholder Book";
+            _author = "Placeholder Author";
+        }
         //properties
         public string Title { get => _title; set => _title = value; }
         public string Author { get => _author; set => _author = value; }
+
+
     }
 }
